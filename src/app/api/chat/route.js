@@ -6,8 +6,8 @@ export async function POST(req) {
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
-  const today = new Date().toDateString(); // e.g., "Mon Jun 16 2025"
-  const context = ""; // Optional: You can populate this with relevant info if needed
+  const today = new Date().toDateString(); 
+  const context = ""; 
 
   const fullPrompt = context
     ? `Today is ${today}.\n\nContext:\n${context}\n\nQuestion:\n${prompt}`
